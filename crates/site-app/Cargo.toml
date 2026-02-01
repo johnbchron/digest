@@ -1,0 +1,17 @@
+[package]
+name = "site-app"
+version = "0.1.0"
+
+edition = "2024"
+
+[dependencies]
+feeds = { path = "../feeds" }
+
+tracing.workspace = true
+
+leptos.workspace = true
+
+tokio = { workspace = true, features = [ "time" ] }
+
+css-minify-macro = { git = "https://github.com/rambit-systems/rambit" }
+rand = "0.9.2"

@@ -1,0 +1,18 @@
+@import "tailwindcss" source("../../../../crates");
+
+@theme {
+  /* disable larger breakpoints */
+  --breakpoint-lg: initial;
+  --breakpoint-xl: initial;
+  --breakpoint-2xl: initial;
+}
+
+@layer base {
+  ol,ul,menu {
+    list-style-type: disc;
+  }
+
+  li {
+    @apply ml-6;
+  }
+}

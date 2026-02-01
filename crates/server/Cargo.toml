@@ -1,0 +1,26 @@
+[package]
+name = "server"
+version = "0.1.0"
+
+edition = "2024"
+
+[dependencies]
+feeds = { path = "../feeds" }
+site-app = { path = "../site-app" }
+
+tracing.workspace = true
+tracing-subscriber = { version = "0.3", features = [ "env-filter" ] }
+
+leptos = { workspace = true, features = [ "ssr" ] }
+leptos_axum = { workspace = true }
+
+any_spawner.workspace = true
+futures.workspace = true
+tokio = { workspace = true, features = [ "macros", "rt-multi-thread" ] }
+
+axum = { version = "0.8", features = [ "http2", "macros" ] }
+miette = { workspace = true, features = [ "fancy" ] }
+tower = { version = "0.5" }
+tower-http = "0.6"
+
+base64 = "0.22.1"
